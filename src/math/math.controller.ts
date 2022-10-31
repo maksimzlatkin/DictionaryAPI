@@ -14,3 +14,13 @@ export class SquareController {
     return {'num' : num, 'square' : this.math.getSquare(num)};
   }
 }
+
+@Controller('squareRoot')
+export class SquareRootController {
+    private math = new MathService();
+
+  @Get(':num')
+  getSquare(@Param('num') num : number){
+    return {'num' : num, 'squareRoot' : this.math.getSquareRoot(num)};
+  }
+}
